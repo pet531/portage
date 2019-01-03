@@ -57,7 +57,7 @@ echo $final
 while true; do
     read -p "Do you want to write this to package.use? (yes/no)" yn
     case $yn in
-        yes ) echo $title $choices | sudo tee --append /etc/portage/package.use; break;;
+        yes ) echo $final | sudo tee --append /etc/portage/package.use; break;;
         no ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
